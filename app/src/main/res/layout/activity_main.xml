@@ -6,13 +6,78 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
+        <Switch
+            android:id="@+id/switchBluetooth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="blueToothManager"
+            android:text="Bluetooth" />
+
+        <Button
+            android:id="@+id/listPaired"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="listPairedDevices"
+            android:text="Paired Devices" />
+
+        <Button
+            android:id="@+id/visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="makeDeviceVisible"
+            android:text="VISIBLE" />
+
+        <TextView
+            android:id="@+id/servText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Server Side" />
+
+        <Button
+            android:id="@+id/btnServer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="serverLauncher"
+            android:text="SERVER" />
+
+        <Button
+            android:id="@+id/btnServDisconnect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="closeServ"
+            android:text="CLOSE SERVER" />
+
+        <TextView
+            android:id="@+id/cliText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Client Side" />
+
+        <EditText
+            android:id="@+id/deviceAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="SERVER MAC ADDRESS" />
+
+        <Button
+            android:id="@+id/btnClient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="clientLauncher"
+            android:text="CONNECT" />
+
+        <Button
+            android:id="@+id/btnDisconnect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="closeConnec"
+            android:text="CLOSE CONNECTION" />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
